@@ -1,0 +1,38 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}My Blog{% endblock title %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/index.css' %}">
+{% endblock css_files %}
+
+{% block content %}
+{% comment %} <header><h1><a href="">Tom Blog</a></h1>
+<nav>
+    <a href="">All posts</a>
+</nav>
+</header> {% endcomment %}
+<h1>Welecome to my Blog</h1>
+<section id="welcome">
+    <header>
+        <img src="{% static 'blog/images/daa.jpg ' %}" alt="Tom-Author">
+        <h2>TOM'S BLOG</h2>
+    </header>
+    <p>Hi, I am tom and I love to blog about tech and world</p>
+</section>
+<section id="latest-posts">
+    <h2>My Latest Posts</h2>
+    <ul>
+        {% for post in posts %}
+   {% include "blog/includes/post.html" %}
+   {% endfor %}
+    </ul>
+</section>
+<section id="about">
+    <h2>What I do</h2>
+    <p>I love programming, Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, id inventore. Nostrum, beatae dicta magnam perferendis itaque doloribus? Sapiente, numquam magnam explicabo odio nostrum animi dolore adipisci alias tenetur aut!</p>
+
+ </section>
+{% endblock content %}
+

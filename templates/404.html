@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}404 Error{% endblock title %}
+
+{% block css_files %}
+{% comment %} <link rel="stylesheet" href="{% static 'blog/all-posts.css' %}"> {% endcomment %}
+<link rel="stylesheet" href="{% static 'blog/post-detail.css' %}">
+{% endblock css_files %}
+
+{% block content %}
+<h2>We're sorry! Couln't find the page</h2>
+{% endblock content %}
